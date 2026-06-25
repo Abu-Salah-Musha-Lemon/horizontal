@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Abu Salah Musha Lemon — Creative Portfolio</title>
+<meta name="theme-color" content="#0A1628" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ════════ NAVBAR — pill style like ref image 3 ════════ -->
+<header class="navbar">
+  <a class="nav-logo" href="#" onclick="goTo(0);return false;">
+    <span class="logo-mark">◆</span>Lemon<span class="dot">.</span>
+  </a>
+  <nav class="nav-pill" id="navLinks">
+    <a class="nav-link active" data-i="0">Home</a>
+    <a class="nav-link" data-i="1">About</a>
+    <a class="nav-link" data-i="2">Work</a>
+    <a class="nav-link" data-i="3">Features</a>
+    <a class="nav-link" data-i="4">Services</a>
+    <a class="nav-link" data-i="5">Contact</a>
+  </nav>
+  <button class="btn btn-primary btn-nav-cta" onclick="goTo(5)">Hire Me</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<nav class="mobile-drawer" id="mobileDrawer">
+  <a class="drawer-link" data-i="0">Home</a>
+  <a class="drawer-link" data-i="1">About</a>
+  <a class="drawer-link" data-i="2">Work</a>
+  <a class="drawer-link" data-i="3">Features</a>
+  <a class="drawer-link" data-i="4">Services</a>
+  <a class="drawer-link" data-i="5">Contact</a>
+  <button class="btn btn-primary btn-full" style="margin-top:21px" onclick="goTo(5)">Hire Me</button>
+</nav>
+
+<!-- ════════ HORIZONTAL TRACK — identical mechanism on every device ════════ -->
+<main class="track" id="track">
+
+  <!-- ① HERO — glass card + 3D orb, golden-ratio split like ref 1/2 -->
+  <section class="panel" id="p0" data-i="0">
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+    <div class="hero-grid grid-phi">
+      <div class="col-major">
+        <div class="pill-tag"><span class="pill-dot"></span>Available for freelance</div>
+        <h1 class="display-1">Creative work,<br/>built with<br/><em>precision.</em></h1>
+        <p class="lead">I'm <strong>Abu Salah Musha Lemon</strong> — graphic designer &amp; creative developer crafting brand systems, interfaces, and tools that feel considered, not assembled.</p>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="goTo(2)">View Work</button>
+          <button class="btn btn-glass" onclick="goTo(5)">Get in Touch</button>
+        </div>
+      </div>
+      <div class="col-minor">
+        <div class="hero-orb-card glass-card">
+          <div class="orb-wrap">
+            <div class="orb"></div>
+            <div class="orb-ring"></div>
+          </div>
+          <div class="orb-card-footer">
+            <span class="orb-icon">✦</span>
+            <div>
+              <div class="orb-card-title">Design System</div>
+              <div class="orb-card-sub">Crafted end-to-end</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue">Scroll to explore<span class="cue-line"></span></div>
+  </section>
+
+  <!-- ② ABOUT — feature-card pattern from ref images -->
+  <section class="panel" id="p1" data-i="1">
+    <div class="glow glow-a"></div>
+    <div class="label-row"><span class="pill-tag pill-tag-static">FEATURE</span></div>
+    <h2 class="section-h">About <em>Me</em></h2>
+    <div class="about-layout">
+      <div class="about-text">
+        <p class="lead lead-lg">I combine visual design instincts with technical depth — from brand identities and print collateral to Python automation and video pipelines. Based in Dhaka/Khulna, Bangladesh.</p>
+        <div class="skill-cloud">
+          <span class="stag">Brand Identity</span>
+          <span class="stag stag-alt">Python Dev</span>
+          <span class="stag">Print Design</span>
+          <span class="stag stag-alt">Automation</span>
+          <span class="stag">UI Systems</span>
+        </div>
+      </div>
+      <div class="feature-stack">
+        <div class="feature-card glass-card">
+          <span class="feature-icon">🎨</span>
+          <div>
+            <h3>Beautiful Design</h3>
+            <p>Every layout follows an intentional visual hierarchy and system.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <span class="feature-icon">⚡</span>
+          <div>
+            <h3>High Quality</h3>
+            <p>Production-ready output — detailed, polished, and precise.</p>
+          </div>
+        </div>
+        <div class="feature-card glass-card">
+          <span class="feature-icon">🔧</span>
+          <div>
+            <h3>Versatile Skillset</h3>
+            <p>From static print to interactive code — one person, full range.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ WORK — golden ratio asymmetric grid -->
+  <section class="panel panel-work" id="p2" data-i="2">
+    <div class="glow glow-b"></div>
+    <div class="label-row"><span class="pill-tag pill-tag-static">PORTFOLIO</span></div>
+    <h2 class="section-h">Selected <em>Work</em></h2>
+    <div class="work-grid">
+      <article class="wcard wcard-lg glass-card" onclick="openProject('swapnolok')">
+        <div class="wcard-top">
+          <span class="wcard-chip">Brand Identity</span>
+          <span class="wcard-arrow">↗</span>
+        </div>
+        <div class="wcard-glow"></div>
+        <div class="wcard-body">
+          <h3>Swapnolok Community Center</h3>
+          <p>Full brand identity &amp; print system — logo, banners, leaflets, signage for Khulna.</p>
+        </div>
+      </article>
+      <article class="wcard glass-card" onclick="openProject('pipeline')">
+        <div class="wcard-top"><span class="wcard-chip wcard-chip-dev">Dev</span><span class="wcard-arrow">↗</span></div>
+        <div class="wcard-body"><h3>Video Pipeline</h3><p>Custom Python transition engine.</p></div>
+      </article>
+      <article class="wcard glass-card" onclick="openProject('carousel')">
+        <div class="wcard-top"><span class="wcard-chip">Social</span><span class="wcard-arrow">↗</span></div>
+        <div class="wcard-body"><h3>LinkedIn Carousel</h3><p>10-slide case study deck.</p></div>
+      </article>
+      <article class="wcard glass-card" onclick="openProject('cleanup')">
+        <div class="wcard-top"><span class="wcard-chip wcard-chip-dev">Dev</span><span class="wcard-arrow">↗</span></div>
+        <div class="wcard-body"><h3>Cleanup Script</h3><p>Two-phase Windows automation.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ④ FEATURES — directly modeled on ref image 4 (3 floating cards) -->
+  <section class="panel" id="p3" data-i="3">
+    <div class="glow glow-a"></div>
+    <div class="hex-pattern"></div>
+    <div class="label-row"><span class="pill-tag pill-tag-static">FEATURE</span></div>
+    <h2 class="section-h">What I <em>Bring</em></h2>
+    <div class="floating-features">
+      <div class="ffeature glass-card ff-1">
+        <span class="ff-tag">FEATURE</span>
+        <span class="ff-icon">📊</span>
+        <h3>Brand Strategy</h3>
+        <p>Position your brand clearly with research-backed visual direction.</p>
+      </div>
+      <div class="ffeature glass-card ff-2">
+        <span class="ff-tag">FEATURE</span>
+        <span class="ff-icon">🔗</span>
+        <h3>Full-Stack Build</h3>
+        <p>Connect design and code — from Figma to production-ready front end.</p>
+      </div>
+      <div class="ffeature glass-card ff-3">
+        <span class="ff-tag">FEATURE</span>
+        <span class="ff-icon">🔒</span>
+        <h3>Reliable Delivery</h3>
+        <p>Clear timelines, versioned files, and dependable communication.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ SERVICES / PRICING -->
+  <section class="panel" id="p4" data-i="4">
+    <div class="glow glow-b"></div>
+    <div class="label-row"><span class="pill-tag pill-tag-static">SERVICES</span></div>
+    <h2 class="section-h">Services &amp; <em>Pricing</em></h2>
+    <div class="srv-grid">
+      <div class="scard glass-card">
+        <div class="scard-icon">🎨</div>
+        <h3>Brand Identity</h3>
+        <p>Logo, color system, typography &amp; full brand guidelines.</p>
+        <div class="scard-foot"><span class="scard-price">৳8,000+</span></div>
+      </div>
+      <div class="scard glass-card scard-featured">
+        <span class="scard-badge">Popular</span>
+        <div class="scard-icon">🖨️</div>
+        <h3>Print &amp; Collateral</h3>
+        <p>Banners, posters, leaflets, large-format — production-ready.</p>
+        <div class="scard-foot"><span class="scard-price">৳3,000+</span></div>
+      </div>
+      <div class="scard glass-card">
+        <div class="scard-icon">📱</div>
+        <h3>Social Design</h3>
+        <p>Carousels, case studies &amp; content for LinkedIn / Behance.</p>
+        <div class="scard-foot"><span class="scard-price">৳2,500+</span></div>
+      </div>
+      <div class="scard glass-card">
+        <div class="scard-icon">⚙️</div>
+        <h3>Creative Tech</h3>
+        <p>Python automation, video pipelines &amp; custom tools.</p>
+        <div class="scard-foot"><span class="scard-price">৳5,000+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ CONTACT -->
+  <section class="panel panel-contact" id="p5" data-i="5">
+    <div class="glow glow-a"></div>
+    <div class="contact-grid grid-phi">
+      <div class="col-major">
+        <div class="pill-tag pill-tag-static">CONTACT</div>
+        <h2 class="display-2">Let's build<br/>something <em>great.</em></h2>
+        <p class="lead">Open to freelance work, collaborations, and long-term partnerships.</p>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-input" type="text" placeholder="Your name" required />
+            <input class="form-input" type="email" placeholder="Email address" required />
+          </div>
+          <textarea class="form-input form-textarea" placeholder="Tell me about your project…" required></textarea>
+          <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
+          <div class="form-success" id="formSuccess">Message sent — I'll reply within 24 hours.</div>
+        </form>
+      </div>
+      <div class="col-minor">
+        <div class="contact-card glass-card">
+          <a class="contact-link" href="mailto:your@email.com"><span class="cl-icon">📧</span><div><div class="cl-label">Email</div><div class="cl-val">your@email.com</div></div></a>
+          <a class="contact-link" href="https://behance.net" target="_blank"><span class="cl-icon">💼</span><div><div class="cl-label">Behance</div><div class="cl-val">behance.net/yourprofile</div></div></a>
+          <a class="contact-link" href="https://linkedin.com" target="_blank"><span class="cl-icon">🔗</span><div><div class="cl-label">LinkedIn</div><div class="cl-val">Abu Salah Musha Lemon</div></div></a>
+          <a class="contact-link" href="https://github.com" target="_blank"><span class="cl-icon">⌨️</span><div><div class="cl-label">GitHub</div><div class="cl-val">github.com/yourprofile</div></div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════════ FIXED UI ════════ -->
+<div class="scroll-dots" id="scrollDots">
+  <button class="sdot active" data-i="0" aria-label="Home"></button>
+  <button class="sdot" data-i="1" aria-label="About"></button>
+  <button class="sdot" data-i="2" aria-label="Work"></button>
+  <button class="sdot" data-i="3" aria-label="Features"></button>
+  <button class="sdot" data-i="4" aria-label="Services"></button>
+  <button class="sdot" data-i="5" aria-label="Contact"></button>
+</div>
+
+<button class="nav-arrow nav-prev" id="navPrev" onclick="step(-1)" aria-label="Previous">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<button class="nav-arrow nav-next" id="navNext" onclick="step(1)" aria-label="Next">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+<div class="panel-counter"><span id="counterCur">01</span><span class="counter-sep">/</span><span>06</span></div>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+  <div class="modal-box glass-card" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-tag" id="modalTag">Project</span>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-body" id="modalBody"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

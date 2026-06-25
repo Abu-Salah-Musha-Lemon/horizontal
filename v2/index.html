@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Abu Salah Musha Lemon — Product Design</title>
+<meta name="theme-color" content="#161316" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Free grotesque pairing that mirrors Neue Montreal's geometry.
+     ✏️ If you own a licensed copy of Neue Montreal, replace this
+     link with your own @font-face block in style.css §1 -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- progress bar tied to scroll position -->
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ════════ NAVBAR ════════ -->
+<header class="navbar">
+  <a class="nav-logo" href="#" onclick="goTo(0);return false;">
+    <!-- ✏️ EDIT logo -->
+    arounda<span class="dot">.</span>
+  </a>
+  <nav class="nav-links" id="navLinks">
+    <a class="nav-link" data-i="0">Home</a>
+    <a class="nav-link" data-i="1">Type</a>
+    <a class="nav-link" data-i="2">Palette</a>
+    <a class="nav-link" data-i="3">Work</a>
+    <a class="nav-link" data-i="4">Process</a>
+    <a class="nav-link" data-i="5">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<nav class="mobile-drawer" id="mobileDrawer">
+  <a class="drawer-link" data-i="0">Home</a>
+  <a class="drawer-link" data-i="1">Type</a>
+  <a class="drawer-link" data-i="2">Palette</a>
+  <a class="drawer-link" data-i="3">Work</a>
+  <a class="drawer-link" data-i="4">Process</a>
+  <a class="drawer-link" data-i="5">Contact</a>
+</nav>
+
+<!-- ════════ HORIZONTAL TRACK — same mechanism on all devices ════════ -->
+<main class="track" id="track">
+
+  <!-- ① HERO — 61.8/38.2 golden split -->
+  <section class="panel" id="p0" data-i="0">
+    <div class="glow glow-orange"></div>
+    <div class="panel-grid grid-phi">
+      <div class="col-major">
+        <div class="eyebrow">Product Design Agency</div>
+        <h1 class="display-1">Designing<br/>products that<br/><em>feel inevitable.</em></h1>
+        <p class="lead">I'm <strong>Abu Salah Musha Lemon</strong> — graphic designer &amp; creative developer building brand systems, print collateral, and digital tools across Bangladesh and beyond.</p>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="goTo(3)">See the work</button>
+          <button class="btn btn-ghost" onclick="goTo(5)">Start a project</button>
+        </div>
+      </div>
+      <div class="col-minor">
+        <div class="stat-stack">
+          <div class="stat-block"><span class="stat-n">30<small>+</small></span><span class="stat-l">Projects shipped</span></div>
+          <div class="stat-block"><span class="stat-n">03<small>y</small></span><span class="stat-l">In practice</span></div>
+          <div class="stat-block"><span class="stat-n">100<small>%</small></span><span class="stat-l">Client satisfaction</span></div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- ② TYPOGRAPHY -->
+  <section class="panel" id="p1" data-i="1">
+    <div class="glow glow-orange-soft"></div>
+    <div class="label-row"><span class="section-tag">01 — Typography</span></div>
+    <div class="type-showcase">
+      <h2 class="type-hero">Neue Montreal</h2>
+      <div class="type-weights">
+        <span class="tw" style="font-weight:400">Regular</span>
+        <span class="tw" style="font-weight:500">Medium</span>
+        <span class="tw" style="font-weight:600">Semibold</span>
+      </div>
+    </div>
+    <div class="type-scale-demo">
+      <!-- ✏️ Golden-ratio type scale visualized: each step ×1.618 -->
+      <div class="scale-row"><span class="scale-label">16</span><span class="scale-sample" style="font-size:16px">Aa Bb Cc</span></div>
+      <div class="scale-row"><span class="scale-label">26</span><span class="scale-sample" style="font-size:26px">Aa Bb Cc</span></div>
+      <div class="scale-row"><span class="scale-label">42</span><span class="scale-sample" style="font-size:42px">Aa Bb</span></div>
+      <div class="scale-row"><span class="scale-label">68</span><span class="scale-sample" style="font-size:clamp(34px,6vw,68px)">Aa</span></div>
+    </div>
+  </section>
+
+  <!-- ③ COLOUR PALETTE -->
+  <section class="panel" id="p2" data-i="2">
+    <div class="glow glow-orange"></div>
+    <div class="label-row"><span class="section-tag">02 — Colour Palette</span></div>
+    <h2 class="section-h">Built on the<br/><em>60 / 30 / 10</em> rule.</h2>
+
+    <div class="palette-grid">
+      <div class="swatch-card swatch-60">
+        <span class="swatch-dot" style="background:#161316;border:1px solid #353035"></span>
+        <div class="swatch-meta"><span class="swatch-hex">#161316</span><span class="swatch-role">60% — Dominant</span></div>
+      </div>
+      <div class="swatch-card swatch-30">
+        <span class="swatch-dot" style="background:#453027"></span>
+        <div class="swatch-meta"><span class="swatch-hex">#453027</span><span class="swatch-role">30% — Secondary</span></div>
+      </div>
+      <div class="swatch-card swatch-10">
+        <span class="swatch-dot" style="background:#FF6D29"></span>
+        <div class="swatch-meta"><span class="swatch-hex">#FF6D29</span><span class="swatch-role">10% — Accent</span></div>
+      </div>
+      <div class="swatch-card">
+        <span class="swatch-dot" style="background:#BABABA"></span>
+        <div class="swatch-meta"><span class="swatch-hex">#BABABA</span><span class="swatch-role">Muted text</span></div>
+      </div>
+      <div class="swatch-card">
+        <span class="swatch-dot" style="background:#FFFFFF"></span>
+        <div class="swatch-meta"><span class="swatch-hex">#FFFFFF</span><span class="swatch-role">High emphasis</span></div>
+      </div>
+    </div>
+
+    <!-- live 60/30/10 proportion bar -->
+    <div class="ratio-bar" aria-hidden="true">
+      <div class="ratio-seg" style="flex:60;background:#161316;border:1px solid #353035"></div>
+      <div class="ratio-seg" style="flex:30;background:#453027"></div>
+      <div class="ratio-seg" style="flex:10;background:#FF6D29"></div>
+    </div>
+  </section>
+
+  <!-- ④ WORK -->
+  <section class="panel panel-work" id="p3" data-i="3">
+    <div class="glow glow-orange-soft"></div>
+    <div class="label-row"><span class="section-tag">03 — Selected Work</span></div>
+    <div class="work-grid">
+
+      <article class="wcard wcard-lg" onclick="openProject('swapnolok')">
+        <div class="wcard-media wcard-media-orange">
+          <span class="wcard-num">01</span>
+        </div>
+        <div class="wcard-body">
+          <h3>Swapnolok Community Center</h3>
+          <p>Full brand identity &amp; print system — logo, banners, leaflets, signage.</p>
+          <span class="chip">Brand Identity</span>
+        </div>
+      </article>
+
+      <article class="wcard" onclick="openProject('pipeline')">
+        <div class="wcard-media wcard-media-dark"><span class="wcard-num">02</span></div>
+        <div class="wcard-body">
+          <h3>Video Transition Pipeline</h3>
+          <p>Custom Python effects engine for slideshow production.</p>
+          <span class="chip chip-dev">Dev Project</span>
+        </div>
+      </article>
+
+      <article class="wcard" onclick="openProject('carousel')">
+        <div class="wcard-media wcard-media-mid"><span class="wcard-num">03</span></div>
+        <div class="wcard-body">
+          <h3>LinkedIn Case Study Carousel</h3>
+          <p>10-slide visual narrative for Behance &amp; LinkedIn.</p>
+          <span class="chip chip-social">Social</span>
+        </div>
+      </article>
+
+      <article class="wcard" onclick="openProject('cleanup')">
+        <div class="wcard-media wcard-media-dark"><span class="wcard-num">04</span></div>
+        <div class="wcard-body">
+          <h3>Smart Cleanup Script</h3>
+          <p>Two-phase Windows batch automation with auto-resume.</p>
+          <span class="chip chip-dev">Dev Project</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ⑤ PROCESS -->
+  <section class="panel" id="p4" data-i="4">
+    <div class="glow glow-orange"></div>
+    <div class="label-row"><span class="section-tag">04 — Process</span></div>
+    <h2 class="section-h">How a project<br/><em>comes together.</em></h2>
+    <div class="process-row">
+      <div class="proc-step">
+        <span class="proc-n">01</span>
+        <h3>Discover</h3>
+        <p>Understand the brief, audience, and constraints before anything is drawn.</p>
+      </div>
+      <div class="proc-connector"></div>
+      <div class="proc-step">
+        <span class="proc-n">02</span>
+        <h3>Design</h3>
+        <p>Explore concepts, refine direction, build the system — type, colour, layout.</p>
+      </div>
+      <div class="proc-connector"></div>
+      <div class="proc-step">
+        <span class="proc-n">03</span>
+        <h3>Deliver</h3>
+        <p>Production-ready files, documentation, and a system you can scale alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ CONTACT -->
+  <section class="panel panel-contact" id="p5" data-i="5">
+    <div class="glow glow-orange-soft"></div>
+    <div class="contact-grid">
+      <div class="contact-col-major">
+        <div class="eyebrow">Let's talk</div>
+        <h2 class="display-2">Got a project<br/>in mind?</h2>
+        <p class="lead">Open to freelance work, collaborations, and long-term partnerships.</p>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input class="form-input" type="text" placeholder="Your name" required />
+            <input class="form-input" type="email" placeholder="Email address" required />
+          </div>
+          <textarea class="form-input form-textarea" placeholder="Tell me about your project…" required></textarea>
+          <button class="btn btn-primary btn-full" type="submit">Send message →</button>
+          <div class="form-success" id="formSuccess">Message sent — I'll reply within 24 hours.</div>
+        </form>
+      </div>
+      <div class="contact-col-minor">
+        <a class="contact-link" href="mailto:info@arounda.agency">
+          <span class="contact-link-arrow">↗</span>
+          <span>info@arounda.agency</span>
+        </a>
+        <a class="contact-link" href="https://www.arounda.agency" target="_blank">
+          <span class="contact-link-arrow">↗</span>
+          <span>www.arounda.agency</span>
+        </a>
+        <div class="footer-socials">
+          <a href="#" target="_blank">Behance</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">ArtStation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ════════ FIXED UI: dots / arrows / counter ════════ -->
+<div class="scroll-dots" id="scrollDots">
+  <button class="sdot active" data-i="0" aria-label="Home"></button>
+  <button class="sdot" data-i="1" aria-label="Type"></button>
+  <button class="sdot" data-i="2" aria-label="Palette"></button>
+  <button class="sdot" data-i="3" aria-label="Work"></button>
+  <button class="sdot" data-i="4" aria-label="Process"></button>
+  <button class="sdot" data-i="5" aria-label="Contact"></button>
+</div>
+
+<button class="nav-arrow nav-prev" id="navPrev" onclick="step(-1)" aria-label="Previous">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+</button>
+<button class="nav-arrow nav-next" id="navNext" onclick="step(1)" aria-label="Next">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+</button>
+
+<div class="panel-counter"><span id="counterCur">01</span><span class="counter-sep">/</span><span>06</span></div>
+<div class="scroll-cue">Scroll<span class="cue-line"></span></div>
+
+<!-- project modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-tag" id="modalTag">Project</span>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <p class="modal-body" id="modalBody"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
