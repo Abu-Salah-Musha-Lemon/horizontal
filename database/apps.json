@@ -1,0 +1,46 @@
+[
+  {
+    "id": "v1",
+    "title": "Version 1",
+    "subtitle": "Legacy Stable",
+    "description": "Production-tested release.",
+    "status": "Stable",
+    "color": "#2563EB",
+    "icon": "🚀",
+    "path": "v1/",
+    "updated": "2026-05-01"
+  },
+  {
+    "id": "v2",
+    "title": "Version 2",
+    "subtitle": "Legacy Stable",
+    "description": "Production-tested release.",
+    "status": "Stable",
+    "color": "#2563EB",
+    "icon": "🚀",
+    "path": "v2/",
+    "updated": "2026-05-01"
+  },
+  {
+    "id": "v3",
+    "title": "Version 3",
+    "subtitle": "Modern UI",
+    "description": "Improved performance and UX.",
+    "status": "Popular",
+    "color": "#16A34A",
+    "icon": "⚡",
+    "path": "v3/",
+    "updated": "2026-06-01"
+  },
+  {
+    "id": "v4",
+    "title": "Version 4",
+    "subtitle": "Latest Release",
+    "description": "Newest feature set.",
+    "status": "Latest",
+    "color": "#DC2626",
+    "icon": "🔥",
+    "path": "v4/",
+    "updated": "2026-06-25"
+  }
+]
