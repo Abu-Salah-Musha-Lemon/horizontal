@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu Salah Musha Lemon — Designer & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Display + Body pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR  (fixed, single instance)
+  ═══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <a class="nav-logo" href="#" onclick="goTo(0);return false;">
+      <!-- ✏️ EDIT: Change your name/logo text here -->
+      A<span class="dot">.</span>Lemon
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <!-- ✏️ EDIT: Add or remove nav items. Keep them matching the panel order -->
+      <a class="nav-link" data-index="0" href="#home"    >Home</a>
+      <a class="nav-link" data-index="1" href="#about"   >About</a>
+      <a class="nav-link" data-index="2" href="#work"    >Work</a>
+      <a class="nav-link" data-index="3" href="#services">Services</a>
+      <a class="nav-link" data-index="4" href="#contact" >Contact</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile drawer menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a class="drawer-link" data-index="0" href="#home"    >Home</a>
+    <a class="drawer-link" data-index="1" href="#about"   >About</a>
+    <a class="drawer-link" data-index="2" href="#work"    >Work</a>
+    <a class="drawer-link" data-index="3" href="#services">Services</a>
+    <a class="drawer-link" data-index="4" href="#contact" >Contact</a>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL TRACK  (horizontal on desktop,
+                      vertical on mobile)
+  ═══════════════════════════════════════════ -->
+  <main class="track" id="track">
+
+
+    <!-- ─────────────────────────────────────────
+         PANEL 1 — HOME / HERO
+    ───────────────────────────────────────── -->
+    <section class="panel" id="home" data-panel="0">
+      <div class="panel-bg pb-home"></div>
+      <div class="panel-noise"></div>
+
+      <div class="hero-content">
+        <!-- ✏️ EDIT: Your badge/status text -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for freelance projects
+        </div>
+
+        <!-- ✏️ EDIT: Your headline. \n creates a new line -->
+        <h1 class="hero-headline">
+          Crafting Brands<br/>
+          <em>That Last.</em>
+        </h1>
+
+        <!-- ✏️ EDIT: Your short description -->
+        <p class="hero-sub">
+          I'm <strong>Abu Salah Musha Lemon</strong> — a graphic designer and creative developer
+          based in Bangladesh. I build visual identities, print systems, and digital tools
+          that communicate with clarity and confidence.
+        </p>
+
+        <!-- ✏️ EDIT: CTA buttons -->
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="goTo(2)">View My Work</button>
+          <button class="btn btn-ghost"   onclick="goTo(4)">Let's Talk</button>
+        </div>
+
+        <!-- ✏️ EDIT: Quick stats under hero -->
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-num">30+</span>
+            <span class="hstat-label">Projects</span>
+          </div>
+          <div class="hstat-divider"></div>
+          <div class="hstat">
+            <span class="hstat-num">3+</span>
+            <span class="hstat-label">Years Exp.</span>
+          </div>
+          <div class="hstat-divider"></div>
+          <div class="hstat">
+            <span class="hstat-num">100%</span>
+            <span class="hstat-label">Client Sat.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative floating tags -->
+      <div class="float-tag ft1">Brand Identity</div>
+      <div class="float-tag ft2">Print Design</div>
+      <div class="float-tag ft3">Python Dev</div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────
+         PANEL 2 — ABOUT
+    ───────────────────────────────────────── -->
+    <section class="panel" id="about" data-panel="1">
+      <div class="panel-bg pb-about"></div>
+      <div class="panel-noise"></div>
+
+      <div class="panel-content">
+        <!-- ✏️ EDIT: Section label & title -->
+        <div class="section-eyebrow">Who I am</div>
+        <h2 class="section-title">Designer.<br/><span class="accent">Developer.</span></h2>
+        <p class="section-desc">
+          <!-- ✏️ EDIT: Your about paragraph -->
+          My work spans two disciplines: visual design (branding, print, collateral)
+          and creative technology (Python automation, video pipelines, scripting).
+          I'm based in Dhaka/Khulna, Bangladesh, and I work with clients who want
+          both craft and execution.
+        </p>
+
+        <!-- ✏️ EDIT: Your skill tags -->
+        <div class="skill-cloud">
+          <span class="stag">Brand Identity</span>
+          <span class="stag">Print Design</span>
+          <span class="stag stag-alt">Python</span>
+          <span class="stag">Canva Pro</span>
+          <span class="stag stag-alt">Batch Scripting</span>
+          <span class="stag">Large-Format</span>
+          <span class="stag stag-alt">Video Pipeline</span>
+          <span class="stag">Behance / LinkedIn</span>
+        </div>
+
+        <!-- ✏️ EDIT: Your facts/highlights -->
+        <div class="about-facts">
+          <div class="fact">
+            <span class="fact-icon">📍</span>
+            <span class="fact-text">Dhaka / Khulna, Bangladesh</span>
+          </div>
+          <div class="fact">
+            <span class="fact-icon">🎓</span>
+            <span class="fact-text">Graphic Design & Creative Tech</span>
+          </div>
+          <div class="fact">
+            <span class="fact-icon">🌐</span>
+            <span class="fact-text">Open to remote collaborations</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side accent block -->
+      <div class="about-accent-block">
+        <div class="accent-ring">
+          <div class="accent-inner">
+            <!-- ✏️ EDIT: Your initials or short brand mark -->
+            <span>ASL</span>
+          </div>
+        </div>
+        <div class="accent-quote">
+          <!-- ✏️ EDIT: Your personal motto or quote -->
+          "Design is the bridge between ideas and the world."
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────
+         PANEL 3 — WORK / PORTFOLIO
+    ───────────────────────────────────────── -->
+    <section class="panel" id="work" data-panel="2">
+      <div class="panel-bg pb-work"></div>
+      <div class="panel-noise"></div>
+
+      <div class="work-layout">
+        <div class="work-header">
+          <div class="section-eyebrow">Portfolio</div>
+          <h2 class="section-title">Selected<br/><span class="accent">Projects</span></h2>
+        </div>
+
+        <!-- ✏️ EDIT: Add/remove project cards below.
+             Each card has: thumb emoji/color, title, desc, tag, and optional link -->
+        <div class="work-grid">
+
+          <div class="wcard" onclick="openProject('Swapnolok Community Center Branding')">
+            <div class="wcard-thumb" style="--thumb-from:#2e1245;--thumb-to:#5a1a8a">
+              <span class="wcard-emoji">🏛️</span>
+              <span class="wcard-tag-chip">Brand Identity</span>
+            </div>
+            <div class="wcard-body">
+              <h3 class="wcard-title">Swapnolok Community Center</h3>
+              <p class="wcard-desc">Full branding suite — logo redesign, banners, posters, leaflets & large-format print for Khulna.</p>
+            </div>
+          </div>
+
+          <div class="wcard" onclick="openProject('Python Video Transition Pipeline')">
+            <div class="wcard-thumb" style="--thumb-from:#0a2040;--thumb-to:#1a5080">
+              <span class="wcard-emoji">🎬</span>
+              <span class="wcard-tag-chip wcard-tag-dev">Dev Project</span>
+            </div>
+            <div class="wcard-body">
+              <h3 class="wcard-title">Python Video Pipeline</h3>
+              <p class="wcard-desc">Custom transition system: shredder_twirl, glitch_flash & CapCut-accurate effects in pure Python.</p>
+            </div>
+          </div>
+
+          <div class="wcard" onclick="openProject('LinkedIn Portfolio Carousel')">
+            <div class="wcard-thumb" style="--thumb-from:#0a3020;--thumb-to:#1a6040">
+              <span class="wcard-emoji">📊</span>
+              <span class="wcard-tag-chip wcard-tag-social">Social Media</span>
+            </div>
+            <div class="wcard-body">
+              <h3 class="wcard-title">LinkedIn Portfolio Carousel</h3>
+              <p class="wcard-desc">10-slide 1080×1080px professional portfolio carousel designed for Behance & LinkedIn.</p>
+            </div>
+          </div>
+
+          <div class="wcard" onclick="openProject('Print Collateral Suite')">
+            <div class="wcard-thumb" style="--thumb-from:#2a1010;--thumb-to:#5a2a2a">
+              <span class="wcard-emoji">🖨️</span>
+              <span class="wcard-tag-chip">Print Design</span>
+            </div>
+            <div class="wcard-body">
+              <h3 class="wcard-title">Print Collateral Suite</h3>
+              <p class="wcard-desc">Writing pads, notice boards, one-way vision glass prints, and large-format banners.</p>
+            </div>
+          </div>
+
+          <div class="wcard" onclick="openProject('Windows Cleanup Script v3')">
+            <div class="wcard-thumb" style="--thumb-from:#1a1a40;--thumb-to:#3a3a70">
+              <span class="wcard-emoji">⚙️</span>
+              <span class="wcard-tag-chip wcard-tag-dev">Dev Project</span>
+            </div>
+            <div class="wcard-body">
+              <h3 class="wcard-title">Windows Cleanup Script</h3>
+              <p class="wcard-desc">2-phase batch script with registry-based auto-resume after reboot & timestamped logging.</p>
+            </div>
+          </div>
+
+          <!-- ✏️ EDIT: This is the "add more" / CTA card -->
+          <div class="wcard wcard-cta" onclick="goTo(4)">
+            <div class="wcard-cta-inner">
+              <span class="wcard-cta-icon">✦</span>
+              <p class="wcard-cta-text">Have a project in mind?</p>
+              <span class="wcard-cta-link">Let's talk →</span>
+            </div>
+          </div>
+
+        </div><!-- /work-grid -->
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────
+         PANEL 4 — SERVICES
+    ───────────────────────────────────────── -->
+    <section class="panel" id="services" data-panel="3">
+      <div class="panel-bg pb-services"></div>
+      <div class="panel-noise"></div>
+
+      <div class="panel-content">
+        <div class="section-eyebrow">What I offer</div>
+        <h2 class="section-title">Services &<br/><span class="accent">Pricing</span></h2>
+        <p class="section-desc">
+          Transparent, quality-first work across design and development.
+        </p>
+      </div>
+
+      <!-- ✏️ EDIT: Add/remove service cards. Change icons, titles, desc, price -->
+      <div class="srv-grid">
+
+        <div class="scard">
+          <div class="scard-icon">🎨</div>
+          <h3 class="scard-title">Brand Identity</h3>
+          <p class="scard-desc">Logo design, color system, typography, brand guidelines, and full visual identity documentation.</p>
+          <ul class="scard-features">
+            <li>Logo + variations</li>
+            <li>Color & type system</li>
+            <li>Brand guidelines PDF</li>
+          </ul>
+          <div class="scard-footer">
+            <span class="scard-price">From ৳8,000</span>
+            <button class="scard-btn" onclick="goTo(4)">Enquire</button>
+          </div>
+        </div>
+
+        <div class="scard scard-featured">
+          <div class="scard-badge">Most Requested</div>
+          <div class="scard-icon">🖨️</div>
+          <h3 class="scard-title">Print & Collateral</h3>
+          <p class="scard-desc">Banners, posters, leaflets, one-way vision, writing pads & large-format print, ready for production.</p>
+          <ul class="scard-features">
+            <li>Print-ready files</li>
+            <li>Multiple formats</li>
+            <li>Unlimited revisions</li>
+          </ul>
+          <div class="scard-footer">
+            <span class="scard-price">From ৳3,000</span>
+            <button class="scard-btn" onclick="goTo(4)">Enquire</button>
+          </div>
+        </div>
+
+        <div class="scard">
+          <div class="scard-icon">📱</div>
+          <h3 class="scard-title">Social Media Design</h3>
+          <p class="scard-desc">LinkedIn carousels, Behance case studies, Instagram posts & stories optimized for engagement.</p>
+          <ul class="scard-features">
+            <li>LinkedIn carousels</li>
+            <li>Behance case study</li>
+            <li>Instagram content</li>
+          </ul>
+          <div class="scard-footer">
+            <span class="scard-price">From ৳2,500</span>
+            <button class="scard-btn" onclick="goTo(4)">Enquire</button>
+          </div>
+        </div>
+
+        <div class="scard">
+          <div class="scard-icon">⚙️</div>
+          <h3 class="scard-title">Creative Tech</h3>
+          <p class="scard-desc">Python automation, video pipelines, batch scripts & custom tools that save time and simplify workflows.</p>
+          <ul class="scard-features">
+            <li>Python scripting</li>
+            <li>Video automation</li>
+            <li>Windows tools</li>
+          </ul>
+          <div class="scard-footer">
+            <span class="scard-price">From ৳5,000</span>
+            <button class="scard-btn" onclick="goTo(4)">Enquire</button>
+          </div>
+        </div>
+
+      </div><!-- /srv-grid -->
+    </section>
+
+
+    <!-- ─────────────────────────────────────────
+         PANEL 5 — CONTACT
+    ───────────────────────────────────────── -->
+    <section class="panel" id="contact" data-panel="4">
+      <div class="panel-bg pb-contact"></div>
+      <div class="panel-noise"></div>
+
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <div class="section-eyebrow">Get in touch</div>
+          <h2 class="section-title">Let's Build<br/><span class="accent">Something.</span></h2>
+          <p class="section-desc">
+            Open to freelance projects, collaborations, and long-term partnerships.
+            Drop me a message and I'll get back within 24 hours.
+          </p>
+
+          <!-- ✏️ EDIT: Your contact details -->
+          <div class="contact-details">
+            <div class="cdetail">
+              <span class="cdetail-icon">📧</span>
+              <div>
+                <div class="cdetail-label">Email</div>
+                <!-- ✏️ Change href and text to your real email -->
+                <a class="cdetail-val" href="mailto:your@email.com">your@email.com</a>
+              </div>
+            </div>
+            <div class="cdetail">
+              <span class="cdetail-icon">📍</span>
+              <div>
+                <div class="cdetail-label">Based in</div>
+                <span class="cdetail-val">Dhaka / Khulna, Bangladesh</span>
+              </div>
+            </div>
+            <div class="cdetail">
+              <span class="cdetail-icon">💼</span>
+              <div>
+                <div class="cdetail-label">Behance</div>
+                <!-- ✏️ Change href and text -->
+                <a class="cdetail-val" href="https://behance.net" target="_blank">behance.net/yourprofile</a>
+              </div>
+            </div>
+            <div class="cdetail">
+              <span class="cdetail-icon">🔗</span>
+              <div>
+                <div class="cdetail-label">LinkedIn</div>
+                <!-- ✏️ Change href and text -->
+                <a class="cdetail-val" href="https://linkedin.com" target="_blank">Abu Salah Musha Lemon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ EDIT: Contact form — connect to Formspree/Netlify/EmailJS as needed -->
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="fname">Your Name</label>
+              <input class="form-input" id="fname" type="text" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="femail">Email Address</label>
+              <input class="form-input" id="femail" type="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fsubject">Subject</label>
+            <!-- ✏️ EDIT: Change dropdown options to match your services -->
+            <select class="form-input form-select" id="fsubject" required>
+              <option value="">Select a service...</option>
+              <option>Brand Identity Design</option>
+              <option>Print & Collateral</option>
+              <option>Social Media Design</option>
+              <option>Creative Tech / Scripting</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fmessage">Message</label>
+            <textarea class="form-input form-textarea" id="fmessage" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Send Message ✦</button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message sent! I'll reply within 24 hours.
+          </div>
+        </form>
+
+      </div><!-- /contact-layout -->
+
+      <!-- Footer row -->
+      <footer class="site-footer">
+        <!-- ✏️ EDIT: Your name and year -->
+        <span>© 2025 Abu Salah Musha Lemon</span>
+        <span class="footer-sep">·</span>
+        <span>Designed & built with care.</span>
+        <!-- ✏️ EDIT: Your social links -->
+        <div class="footer-socials">
+          <a href="https://behance.net"  target="_blank">Behance</a>
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+          <a href="https://github.com"   target="_blank">GitHub</a>
+        </div>
+      </footer>
+    </section>
+
+
+  </main><!-- /track -->
+
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL INDICATORS
+  ═══════════════════════════════════════════ -->
+
+  <!-- Dot indicators (desktop) -->
+  <div class="scroll-dots" id="scrollDots">
+    <button class="sdot active" data-index="0" aria-label="Go to Home"></button>
+    <button class="sdot" data-index="1" aria-label="Go to About"></button>
+    <button class="sdot" data-index="2" aria-label="Go to Work"></button>
+    <button class="sdot" data-index="3" aria-label="Go to Services"></button>
+    <button class="sdot" data-index="4" aria-label="Go to Contact"></button>
+  </div>
+
+  <!-- Arrow navigation (desktop) -->
+  <button class="nav-arrow nav-prev" id="navPrev" aria-label="Previous section" onclick="step(-1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+  <button class="nav-arrow nav-next" id="navNext" aria-label="Next section" onclick="step(1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+
+  <!-- Panel counter -->
+  <div class="panel-counter" id="panelCounter">
+    <span id="counterCurrent">01</span>
+    <span class="counter-sep">/</span>
+    <span class="counter-total">05</span>
+  </div>
+
+  <!-- Scroll hint (only on first load) -->
+  <div class="scroll-hint" id="scrollHint">
+    <span>Scroll or use arrows</span>
+    <span class="hint-arrow">→</span>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       PROJECT MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3 class="modal-title" id="modalTitle">Project Title</h3>
+      <p class="modal-body" id="modalBody">Project details coming soon.</p>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
