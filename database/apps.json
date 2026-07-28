@@ -43,4 +43,16 @@
     "path": "v4/",
     "updated": "2026-06-25"
   }
+  ,
+  {
+    "id": "v5",
+    "title": "Version 5",
+    "subtitle": "Latest Release",
+    "description": "Newest feature set.",
+    "status": "Latest",
+    "color": "#DC2626",
+    "icon": "🔥",
+    "path": "v5/",
+    "updated": "2026-07-25"
+  }
 ]
